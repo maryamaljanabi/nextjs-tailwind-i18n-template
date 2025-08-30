@@ -19,8 +19,8 @@
   "language": {
     "english": "الإنجليزية",
     "arabic": "العربية",
-    "en": "English",
-    "ar": "Arabic"
+    "en": "الإنجليزية",
+    "ar": "العربية"
   },
   "contactPage": {
     "metadata": {
@@ -51,6 +51,7 @@
     "githubStar": "نجمة على GitHub",
     "quickStart": "البدء السريع:",
     "copied": "تم نسخ الأمر إلى الحافظة",
+    "copyCommand": "نسخ الأمر",
     "features": {
       "title": "الميزات",
       "nextjs": " مع موجه التطبيقات للتطبيقات الحديثة",
