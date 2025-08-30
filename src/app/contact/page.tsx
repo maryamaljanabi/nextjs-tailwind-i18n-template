@@ -1,5 +1,15 @@
 import { ContactForm } from "@/components/contact/contact-form";
 import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+import { generateLocalizedMetadata } from "@/lib/metadata";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return generateLocalizedMetadata({
+    namespace: "contactPage",
+    titleKey: "title",
+    descriptionKey: "subtitle",
+  });
+}
 
 export default async function ContactPage() {
   const t = await getTranslations();

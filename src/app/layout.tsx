@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Open_Sans, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
@@ -21,6 +22,27 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   display: "swap",
 });
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("common");
+
+  return {
+    title: {
+      template: `%s | ${t("metadata.siteName")}`,
+      default: t("metadata.siteName"),
+    },
+    description: t("metadata.siteDescription"),
+    keywords: t("metadata.siteKeywords"),
+    openGraph: {
+      type: "website",
+      siteName: t("metadata.siteName"),
+    },
+    icons: {
+      icon: "/favicon.svg",
+      shortcut: "/favicon.svg",
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
