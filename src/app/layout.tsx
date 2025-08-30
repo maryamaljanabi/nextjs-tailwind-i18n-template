@@ -2,11 +2,12 @@ import { Open_Sans, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getLocale } from "next-intl/server";
+import { getMessages, getLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Footer } from "@/components/layout/footer";
 import { getDir, LanguageCode } from "@/i18n/utils";
+import { Navbar } from "@/components/layout/navbar";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -39,7 +40,13 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Toaster />
-          {children}
+          <Navbar />
+          <main
+            className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-justify"
+            role="main"
+          >
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>
