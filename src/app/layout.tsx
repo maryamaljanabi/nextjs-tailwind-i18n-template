@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/layout/footer";
 import { getDir, LanguageCode } from "@/i18n/utils";
 import { Navbar } from "@/components/layout/navbar";
@@ -40,6 +41,9 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Toaster />
+          {process.env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+          )}
           <Navbar />
           <main
             className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-justify"
