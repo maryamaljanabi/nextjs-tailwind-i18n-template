@@ -146,8 +146,8 @@ export async function POST(request: Request) {
     const { name, email, subject, message } = result.data;
 
     const { data, error } = await resend.emails.send({
-      from: "Form Submission <onboarding@resend.dev>", // Update this with your verified domain in Resend or leave it like this if it's for testing purposes
-      to: "", // Update this with your email address
+      from: `Form Submission <${process.env.RESEND_FROM_EMAIL}>`, // Update this with your verified domain in Resend or use onboarding@resend.dev if it's for testing purposes
+      to: process.env.RESEND_TO_EMAIL || "", // Update this with your email address
       subject: `${subject}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
       html: EmailTemplate({ name, email, subject, message }),
