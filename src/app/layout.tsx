@@ -1,5 +1,11 @@
 import { Open_Sans, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { getDir, LanguageCode } from "@/i18n/utils";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -18,12 +24,22 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  if (!routing.locales.includes(locale as LanguageCode)) {
+    notFound();
+  }
+  const messages = await getMessages();
+  const dir = getDir(locale as LanguageCode);
+
   return (
-    <html>
+    <html lang={locale} dir={dir}>
       <body
         className={`${openSans.variable} ${robotoMono.variable} overflow-x-hidden antialiased`}
       >
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          <Toaster />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
