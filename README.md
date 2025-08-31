@@ -1,6 +1,8 @@
 # Next.js Landing Page Starter Kit
 
-A modern, feature-rich starter kit for Next.js projects with TypeScript, TailwindCSS, multi-language support, and a fully functional contact form. The template can save you hours of setup time and focus on building your unique landing page or application.
+A modern, feature-rich starter kit for Next.js projects with TypeScript, TailwindCSS, multi-language support, and a fully functional contact form. The template can save you hours of setup time and focus on building your unique landing page or application. The template has 100% lighthouse metrics performance.
+
+![lighthouse-screenshot](./public/lighthouse-screenshot.png)
 
 ## 📑 Table of Contents
 
@@ -50,7 +52,7 @@ A modern, feature-rich starter kit for Next.js projects with TypeScript, Tailwin
 ### Prerequisites
 
 - Node.js (version 18.x or later recommended)
-- npm, yarn, or pnpm
+- pnpm
 
 ### Installation
 
@@ -69,16 +71,12 @@ A modern, feature-rich starter kit for Next.js projects with TypeScript, Tailwin
 3. Install dependencies:
 
    ```bash
-   npm install
-   # or
-   yarn install
-   # or
    pnpm install
    ```
 
 4. Set up environment variables:
    ```bash
-   cp .env.local.example .env
+   cp .env.example .env
    ```
    Then edit `.env` to add your Resend API key and Google Analytics ID.
 
@@ -87,10 +85,6 @@ A modern, feature-rich starter kit for Next.js projects with TypeScript, Tailwin
 To start the development server, run:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
@@ -99,7 +93,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## 📁 Project Structure
 
 ```
-nextjs-landing-starter/
 ├── public/                     # Static assets
 ├── src/
 │   ├── app/                    # Next.js app directory (routes, pages)
@@ -124,8 +117,8 @@ nextjs-landing-starter/
 │   ├── lib/                    # Utility functions and libraries
 │   │   ├── metadata.ts         # Metadata utilities
 │   │   └── utils.ts            # General utility functions
-├── .env.local.example         # Example environment variables
-└── README.md                  # Project documentation
+├── .env.example                # Example environment variables
+└── README.md                   # Project documentation
 ```
 
 ## 🔧 Customization
@@ -334,7 +327,7 @@ This project uses environment variables to manage sensitive information and conf
 To set up your environment variables, copy the example file and then edit it with your actual values:
 
 ```bash
-cp .env.local.example .env
+cp .env.example .env
 ```
 
 ## 📧 Email Integration
