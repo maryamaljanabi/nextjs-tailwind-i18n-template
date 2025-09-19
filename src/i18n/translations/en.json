@@ -1,0 +1,81 @@
+{
+  "navbar": {
+    "home": "HOME",
+    "contact": "CONTACT",
+    "contactUs": "Contact Us",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Next.js Starter kit",
+    "subtitle": "A modern starter kit with Next.js, TailwindCSS, TypeScript, and more.",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "description": "A powerful starter kit for your next web project.",
+    "sections": "Sections",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "language": {
+    "english": "English",
+    "arabic": "Arabic",
+    "en": "English",
+    "ar": "Arabic"
+  },
+  "contactPage": {
+    "metadata": {
+      "title": "Contact Us",
+      "subtitle": "Have a question? Don't hesitate to reach out"
+    },
+    "title": "Contact Us",
+    "subtitle": "Have a question? Don't hesitate to reach out",
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred. Please try again.",
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address",
+      "messageTooShort": "Message must be at least 10 characters"
+    }
+  },
+  "homePage": {
+    "title": "Next.js Starter Kit",
+    "subtitle": "A modern, feature-rich template for Next.js 15 to save you hours of setup time. Includes TypeScript, TailwindCSS, i18n, and more.",
+    "githubView": "View on GitHub",
+    "githubStar": "Star on GitHub",
+    "quickStart": "Quick start:",
+    "copied": "Command copied to clipboard",
+    "copyCommand": "Copy command",
+    "features": {
+      "title": "Features",
+      "nextjs": " With App Router for modern React applications and TypeScript for type safety and improved developer experience",
+      "tailwind": " For utility-first styling and responsive design (using PostCSS plugin)",
+      "shadcn": " For beautifully designed, accessible, and customizable components",
+      "multilanguage": " With English and Arabic (LTR and RTL layouts configurable), config stored in cookies. Using next-intl package",
+      "multilanguageStrong": " Multi-language support with i18n",
+      "accessibility": " With WCAG 2.1 standards, including screen reader support, keyboard navigation, ARIA attributes, and localized accessibility labels",
+      "accessibilityStrong": " Full accessibility compliance",
+      "contactForm": " With Zod validation and Resend email integration",
+      "contactFormStrong": " Contact form",
+      "notifications": " Using Sonner for user feedback (e.g., after form submission)",
+      "notificationsStrong": " Popup Toasts/Notifications",
+      "analytics": " For tracking user behavior",
+      "responsive": " That works on all devices",
+      "responsiveStrong": " Responsive design",
+      "codeQuality": " For code quality and consistency"
+    }
+  },
+  "common": {
+    "metadata": {
+      "siteName": "Next.js Starter Kit",
+      "siteDescription": "A modern, fast, and SEO-optimized Next.js starter kit with internationalization support.",
+      "siteKeywords": "nextjs, react, typescript, tailwind, starter"
+    }
+  }
+}
