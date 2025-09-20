@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useCallback, FormEvent, FocusEvent } from "react";
+import { useMemo, useState, useCallback, FormEvent } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";

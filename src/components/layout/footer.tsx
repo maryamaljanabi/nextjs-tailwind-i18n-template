@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer
-      className="w-full border-border border-t bg-white py-4 text-center text-sm text-gray-600"
+      className="w-full border-border border-t bg-background py-4 text-center text-sm text-primary"
       role="contentinfo"
     >
       <div>
@@ -16,7 +16,7 @@ export function Footer() {
           href="https://github.com/maryamaljanabi"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 transition-colors hover:text-gray-900 focus:outline-none active:text-gray-900"
+          className="text-primary transition-colors hover:text-foreground focus:outline-none active:text-foreground"
           aria-label={`${t("footer.description")} - Maryam Aljanabi`}
         >
           Maryam Aljanabi
