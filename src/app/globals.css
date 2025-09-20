@@ -11,12 +11,22 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-success: var(--success);
+  --color-bg-gradient-1: var(--bg-gradient-1);
+  --color-bg-gradient-2: var(--bg-gradient-2);
+  --color-text-gradient-1: var(--text-gradient-1);
+  --color-text-gradient-2: var(--text-gradient-2);
+  --color-border-hover: var(--border-hover);
 }
 
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
-  --border: oklch(0.922 0 0);
+  --bg-gradient-1: oklch(98.5% 0.002 247.839);
+  --bg-gradient-2: oklch(96.7% 0.003 264.542);
+  --text-gradient-1: oklch(55.1% 0.027 264.364);
+  --text-gradient-2: oklch(21% 0.034 264.665);
+  --border: oklch(92.8% 0.006 264.531);
+  --border-hover: oklch(77.886% 0.00921 264.583);
   --primary: oklch(0.3 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(96.7% 0.003 264.542);

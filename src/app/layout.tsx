@@ -6,6 +6,7 @@ import { getMessages, getLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getDir, LanguageCode } from "@/i18n/utils";
+import { Navbar } from "@/components/layout/navbar";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -38,8 +39,9 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Toaster closeButton />
+          <Navbar />
           <main
-            className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-justify"
+            className="min-h-screen bg-gradient-to-b from-bg-gradient-1 to-bg-gradient-2 text-justify"
             role="main"
           >
             {children}

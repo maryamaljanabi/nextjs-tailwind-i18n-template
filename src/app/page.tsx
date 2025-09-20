@@ -101,10 +101,10 @@ export default function Home() {
   return (
     <div className="container py-16 lg:max-w-4xl">
       <div className="mb-12 text-center">
-        <h1 className="bg-gradient-to-r from-gray-500 to-gray-900 bg-clip-text pb-6 text-4xl font-bold text-transparent md:text-5xl">
+        <h1 className="bg-gradient-to-r from-text-gradient-1 to-text-gradient-2 bg-clip-text pb-6 text-4xl font-bold text-transparent md:text-5xl">
           {t("homePage.title")}
         </h1>
-        <p className="mb-8 text-lg text-gray-700 md:text-xl">
+        <p className="mb-8 text-lg text-primary md:text-xl">
           {t("homePage.subtitle")}
         </p>
 
@@ -133,7 +133,7 @@ export default function Home() {
 
       <div className="space-y-12">
         <div>
-          <h2 className="mb-6 text-2xl font-semibold text-gray-800 md:text-3xl">
+          <h2 className="mb-6 text-2xl font-semibold text-primary md:text-3xl">
             {t("homePage.features.title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -142,7 +142,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="p-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
+                  className="p-4 rounded-lg border border-border hover:border-border-hover transition-colors"
                 >
                   <div className="flex items-start gap-3">
                     <Icon className={feature.iconClass} />
@@ -152,7 +152,7 @@ export default function Home() {
                           ? t(feature.titleKey)
                           : feature.titleKey}
                       </strong>
-                      <p className="text-gray-700">
+                      <p className="text-primary">
                         {t(feature.descriptionKey)}
                       </p>
                     </div>
