@@ -142,7 +142,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="p-4 rounded-lg border border-border hover:border-border-hover transition-colors"
+                  className="p-4 rounded-lg border border-border hover:border-border-light transition-colors"
                 >
                   <div className="flex items-start gap-3">
                     <Icon className={feature.iconClass} />
