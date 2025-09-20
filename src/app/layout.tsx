@@ -39,6 +39,9 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Toaster closeButton />
+          {process.env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+          )}
           <Navbar />
           <main
             className="min-h-screen bg-gradient-to-b from-bg-gradient-1 to-bg-gradient-2 text-justify"
