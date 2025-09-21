@@ -112,12 +112,11 @@ export default function Home() {
           {actionButtons.map(({ href, icon: Icon, textKey }) => (
             <Button
               key={href}
-              size="lg"
               variant="inverse"
-              href={githubRepo}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 text-lg"
+              className="px-8 py-3 text-md"
             >
               <Icon size={20} />
               {t(textKey)}

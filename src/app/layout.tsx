@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Roboto_Mono } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { NextIntlClientProvider } from "next-intl";
@@ -13,12 +13,6 @@ import { Navbar } from "@/components/layout/navbar";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -58,9 +52,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={dir}>
-      <body
-        className={`${openSans.variable} ${robotoMono.variable} overflow-x-hidden antialiased`}
-      >
+      <body className={`${openSans.variable} overflow-x-hidden antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Toaster closeButton />
           {process.env.NEXT_PUBLIC_GA_ID && (
